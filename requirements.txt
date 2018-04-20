@@ -1,0 +1,4 @@
+prometheus_client==0.2.0
+huey==1.9.1
+click
+redis
