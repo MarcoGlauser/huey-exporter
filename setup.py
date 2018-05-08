@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 setup(
         name='huey-exporter',
-        version='0.0.1',
+        version='0.1.0',
         description=' Huey exporter for Prometheus',
         url='https://github.com/MarcoGlauser/huey-exporter',
         author='Marco Glauser',

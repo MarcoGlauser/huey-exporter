@@ -1,14 +1,14 @@
 # Huey Prometheus Exporter
 This project provides metrics about huey to prometheus
 
-Latest Version: **0.0.1**
+Latest Version: **0.1.0**
 
 ## Usage
 
 #### Installation
 Installation of the latest release:
 ```
-pip install git+https://github.com/MarcoGlauser/huey-exporter.git@0.0.1
+pip install git+https://github.com/MarcoGlauser/huey-exporter.git@0.1.0
 ```
 Installation of the master branch:
 ```
