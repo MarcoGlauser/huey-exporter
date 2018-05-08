@@ -18,8 +18,9 @@ class EventQueue:
     prefix = 'queue_task_'
 
     def __init__(self, name, connection_pool):
-        self.name = self.clean_queue_name(name)
-        self.huey = RedisHuey(name, connection_pool=connection_pool)
+        self.name = name
+        self.clean_name = self.clean_queue_name(self.name)
+        self.huey = RedisHuey(self.name, connection_pool=connection_pool)
         self.event_handlers = {
             EVENT_FINISHED: self.event_finished,
             EVENT_ENQUEUED: self.event_enqueued,
