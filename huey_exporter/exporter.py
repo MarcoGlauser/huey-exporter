@@ -23,5 +23,9 @@ def run_exporter(connection_string, queue_name):
     queue.listen()
 
 
-if __name__ == '__main__':
+def main():
     run_exporter()
+
+
+if __name__ == '__main__':
+    main()

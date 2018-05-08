@@ -10,10 +10,14 @@ setup(
         packages=find_packages(),
         include_package_data=True,
         install_requires=[
-            'prometheus_client>=0.2.0'
-            'huey>=1.9.0'
-            'click>=6.7'
-            'redis>=2.10.6'
+            'prometheus_client>=0.2.0',
+            'huey>=1.9.0',
+            'click>=6.7',
+            'redis>=2.10.6',
         ],
-        zip_safe=False
+        entry_points={
+          'console_scripts': [
+              'huey_exporter = huey_exporter.exporter:main'
+          ]
+        }
 )
