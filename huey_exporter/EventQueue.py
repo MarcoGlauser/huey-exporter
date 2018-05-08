@@ -3,7 +3,7 @@ import re
 from huey import RedisHuey
 from huey.consumer import EVENT_FINISHED, EVENT_STARTED, EVENT_ERROR_TASK
 from prometheus_client import Summary, Counter
-from huey_exporter.RedisEnqueueEventHuey import EVENT_ENQUEUED
+from huey_exporter.RedisEnqueuedEventHuey import EVENT_ENQUEUED
 
 # Create a metric to track time spent and requests made.
 ENQUEUED_COUNTER = Counter('huey_enqueued_tasks', 'Huey Tasks enqueued', ['queue_name', 'task_name'])

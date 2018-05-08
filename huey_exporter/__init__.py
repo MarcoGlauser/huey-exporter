@@ -1,1 +1,1 @@
-from huey_exporter.RedisEnqueueEventHuey import RedisEnqueueEventHuey
+from huey_exporter.RedisEnqueuedEventHuey import RedisEnqueuedEventHuey
