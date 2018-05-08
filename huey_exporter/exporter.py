@@ -6,11 +6,16 @@ from huey_exporter.EventQueue import EventQueue
 
 
 @click.command()
-@click.option('--connection-string', '-c',
+@click.option('--connection_string', '-c',
+              envvar='REDIS_CONNECTION_STRING',
               default='redis://localhost:6379',
               help='Connection string to redis including database. for example redis://localhost:6379/0'
               )
-@click.option('--queue_name', '-q', required=True, help='Name of the queue to monitor')
+@click.option('--queue_name',
+              '-q', envvar='QUEUE_NAME',
+              required=True,
+              help='Name of the queue to monitor'
+              )
 def run_exporter(connection_string, queue_name):
     # Start up the server to expose the metrics.
     start_http_server(9100)
