@@ -6,19 +6,24 @@ from huey_exporter.EventQueue import EventQueue
 
 
 @click.command()
-@click.option('--connection_string', '-c',
+@click.option('--connection-string', '-c',
               envvar='REDIS_CONNECTION_STRING',
               default='redis://localhost:6379',
               help='Connection string to redis including database. for example redis://localhost:6379/0'
               )
-@click.option('--queue_name',
+@click.option('--queue-name',
               '-q', envvar='QUEUE_NAME',
               required=True,
               help='Name of the queue to monitor'
               )
-def run_exporter(connection_string, queue_name):
+@click.option('--port', '-p',
+              envvar='EXPORTER_PORT',
+              default='9100',
+              help='Port to expose the metrics on'
+              )
+def run_exporter(connection_string, queue_name, port):
     # Start up the server to expose the metrics.
-    start_http_server(9100)
+    start_http_server(port)
     connection_pool = redis.BlockingConnectionPool.from_url(
             connection_string,
             max_connections=5,
