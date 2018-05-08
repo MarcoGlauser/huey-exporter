@@ -2,3 +2,4 @@ prometheus_client==0.2.0
 huey==1.9.1
 click==6.7
 redis==2.10.6
+bumpversion==0.5.3

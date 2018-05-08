@@ -2,7 +2,7 @@ import click
 import redis
 from prometheus_client import start_http_server
 
-from EventQueue import EventQueue
+from huey_exporter.EventQueue import EventQueue
 
 
 @click.command()
