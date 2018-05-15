@@ -1,14 +1,14 @@
 # Huey Prometheus Exporter
 This project provides metrics about the [huey task queue](https://github.com/coleifer/huey) for prometheus
 
-Latest Version: **0.1.0**
+Latest Version: **0.1.1**
 
 ## Usage
 
 #### Installation
 Installation of the latest release:
 ```
-pip install git+https://github.com/MarcoGlauser/huey-exporter.git@0.1.0
+pip install git+https://github.com/MarcoGlauser/huey-exporter.git@0.1.1
 ```
 Installation of the master branch:
 ```
