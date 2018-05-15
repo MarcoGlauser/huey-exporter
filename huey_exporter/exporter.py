@@ -18,7 +18,8 @@ from huey_exporter.EventQueue import EventQueue
               )
 @click.option('--port', '-p',
               envvar='EXPORTER_PORT',
-              default='9100',
+              default=9100,
+              type=click.IntRange(0, 65535),
               help='Port to expose the metrics on'
               )
 def run_exporter(connection_string, queue_name, port):
